@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    // Firebase SDK
+    id 'com.google.gms.google-services'
+    // Firebase Crashlytics
+    id 'com.google.firebase.crashlytics'
+    // Navigation
+    id 'androidx.navigation.safeargs.kotlin'
+    // Data binding
+    id 'kotlin-kapt'
+    // Parcelize annotation
+    id 'kotlin-android-extensions'
+}
+
+android {
+
+    compileSdk rootProject.ext.compile_sdk_version
+
+    defaultConfig {
+        applicationId "com.muradismayilov.righmo"
+        minSdk rootProject.ext.min_sdk_version
+        targetSdk rootProject.ext.target_sdk_version
+        versionCode rootProject.ext.version_code
+        versionName rootProject.ext.version_name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:$ktx_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$ext_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    // Firebase BoM
+    implementation platform("com.google.firebase:firebase-bom:$firebase_bom_version")
+    // Firebase analytics
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    // Firebase crashlytics
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    // Firebase authentication
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    // Firebase firestore
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    // Firebase storage
+    implementation 'com.google.firebase:firebase-storage-ktx'
+    // Firebase UI
+    implementation "com.firebaseui:firebase-ui-firestore:$firebase_ui_version"
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+    // Lifecycle
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutines_version"
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    // Moshi
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+    // Retrofit converter Moshi
+    implementation "com.squareup.retrofit2:converter-moshi:$converter_moshi"
+    // Paging
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+    implementation "androidx.paging:paging-rxjava2-ktx:$paging_version"
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+}

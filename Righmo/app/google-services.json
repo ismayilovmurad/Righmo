@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "627557688986",
+    "project_id": "rightmoment",
+    "storage_bucket": "rightmoment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627557688986:android:64b705f70bd7a0e272a123",
+        "android_client_info": {
+          "package_name": "com.muradismayilov.righmo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627557688986-k22r6lmj39m175kqkk7rigrub90p8vib.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.muradismayilov.righmo",
+            "certificate_hash": "3110311532b8f780298f5739370f46469c1bb0c0"
+          }
+        },
+        {
+          "client_id": "627557688986-kbv29rkj6qm5n4v5c0nmfhdog6r99b53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1cBdumDfJCKbNn2D1rKAn7igVbYbWT28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627557688986-kbv29rkj6qm5n4v5c0nmfhdog6r99b53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
